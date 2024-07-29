@@ -23,6 +23,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import java.awt.Image;
+import java.awt.Toolkit;
  
 
 public class gui extends JFrame implements ActionListener, MouseMotionListener{
@@ -56,7 +58,11 @@ public class gui extends JFrame implements ActionListener, MouseMotionListener{
 		super.setSize(1000, 480);
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		super.setLayout(new FlowLayout(0,0,0));
-	 
+	    
+        Image j = Toolkit.getDefaultToolkit()
+				.getImage("C:\\Users\\hp\\eclipse-workspace\\currency_changer\\bin\\currency_changer\\icon.png");
+		super.setIconImage(j);
+		
 		
 		currency_name_set=new HashSet<String>();
 	    currency_2_rate_set=new HashSet<String>();
